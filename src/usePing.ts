@@ -1,8 +1,6 @@
 import useSWR, { responseInterface } from "swr";
 import { useState, useEffect } from "react";
 
-const fetcher = async (url: string) => fetch(url).then(async (r) => r.json());
-
 export interface Status {
   message: string;
   timestamp: Date;
@@ -40,5 +38,5 @@ export function usePing(): responseInterface<Status, Error> {
   // return useSWR<Status, Error>(["/api/v1/ping", random], fetcher);
 
   // THIS FAILS THE TESTS
-  return useSWR<Status, Error>("/api/v1/ping", fetcher);
+  return useSWR<Status, Error>("/api/v1/ping");
 }

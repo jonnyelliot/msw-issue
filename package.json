@@ -41,7 +41,5 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "msw": "^0.21.3"
-  }
+  "devDependencies": {}
 }
